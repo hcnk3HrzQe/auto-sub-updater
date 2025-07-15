@@ -1,0 +1,29 @@
+name: Auto Update Second Sub
+
+on:
+  schedule:
+    - cron: "15 * * * *"  # 每小时的第15分钟运行
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # 必须有写入权限
+
+    steps:
+      - uses: actions/checkout@v4  # 检出仓库
+
+      - name: Fetch and save config
+        run: |
+          # 直接用curl获取内容并保存
+          curl -sSfL "https://api.wcc.best/sub?target=clash&url=http%3A%2F%2F43.207.145.186%3A8080%2Fclash%2Fproxies&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini" \
+            -o sub_second.txt
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add sub_second.txt
+          git diff --cached --quiet || git commit -m "Update second sub at $(date +'%Y-%m-%d %H:%M')"
+          git push origin HEAD:main
