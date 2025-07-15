@@ -1,30 +1,45 @@
 name: Auto Update Sub
 
-on:  # 注意：这里是关键修复点！
+on:
   schedule:
-    - cron: "*/5 * * * *"    # 必须缩进2空格，前面带短横线`-`
-  workflow_dispatch:          # 必须和schedule同级，不要缩进
+    - cron: "*/30 * * * *"  # 改为每30分钟一次（避免频繁触发限制）
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: write
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整git历史
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
+
       - name: Install dependencies
         run: pip install requests
-      - name: Run script
-        run: python fetch_and_upload.py
-      - name: Commit and push
+
+      - name: Debug directory
+        run: ls -la  # 调试用：显示当前文件
+
+      - name: Run updater
+        id: update
+        run: |
+          python fetch_and_upload.py
+          echo "文件内容前10行："
+          head -n 10 sub.txt || echo "无sub.txt文件"
+
+      - name: Commit changes
+        if: steps.update.outcome == 'success'
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add sub.txt
-          git commit -m "Auto update"
-          git push
+          git diff --cached --quiet || git commit -m "Auto update $(date +'%Y-%m-%d %H:%M')"
+          git push origin HEAD:main
