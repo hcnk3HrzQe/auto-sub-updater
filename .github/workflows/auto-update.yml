@@ -1,14 +1,16 @@
 name: Auto Update Sub
-on:
+
+on:  # 注意：这里是关键修复点！
   schedule:
-    - cron: "*/5 * * * *"  # 注意引号
-  workflow_dispatch: true   # 明确设置为 true
+    - cron: "*/5 * * * *"    # 必须缩进2空格，前面带短横线`-`
+  workflow_dispatch:          # 必须和schedule同级，不要缩进
 
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -24,5 +26,5 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add sub.txt
-          git commit -m "Auto update sub"
+          git commit -m "Auto update"
           git push
