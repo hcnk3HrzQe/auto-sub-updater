@@ -4,13 +4,13 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: Relay_-🇮🇩ID_08, server: 104.17.121.140, port: 8443, type: vmess, uuid: 3da5d27f-08d0-4078-f890-cf950ecb1708, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /}}
-  - {name: _09, server: 212.192.15.223, port: 20521, type: vmess, uuid: f11e2179-5d01-4034-879d-ee03109bc32a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}}
-  - {name: _10, server: 185.47.253.32, port: 29520, type: vmess, uuid: f5a07535-75ee-40b6-b3cf-1b8a496f9dee, alterId: 0, cipher: auto, tls: false}
-  - {name: _11, server: 185.47.252.212, port: 55429, type: vmess, uuid: 60db8cb1-a52b-492c-e23b-e754de6132b6, alterId: 0, cipher: auto, tls: false}
-  - {name: _12, server: 34.80.156.254, port: 55084, type: vmess, uuid: 5691fb8a-d890-4a33-9b0e-73017adae5b2, alterId: 0, cipher: auto, tls: false}
-  - {name: _13, server: 172.233.171.224, port: 16416, type: vmess, uuid: 8c1b9bea-cb51-43bb-a65c-0af31bbbf145, alterId: 0, cipher: auto, tls: false}
-  - {name: _14, server: 125.139.134.133, port: 21791, type: vmess, uuid: bc29535d-dcbe-4663-cfc3-16cb14ba13da, alterId: 0, cipher: auto, tls: false}
+  - {name: Relay_-🇮🇩ID_08 | 5.78Mb, server: 104.17.121.140, port: 8443, type: vmess, uuid: 3da5d27f-08d0-4078-f890-cf950ecb1708, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /}}
+  - {name: _09 | 2.77Mb, server: 212.192.15.223, port: 20521, type: vmess, uuid: f11e2179-5d01-4034-879d-ee03109bc32a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}}
+  - {name: _10 | 6.51Mb, server: 185.47.253.32, port: 29520, type: vmess, uuid: f5a07535-75ee-40b6-b3cf-1b8a496f9dee, alterId: 0, cipher: auto, tls: false}
+  - {name: _11 | 6.02Mb, server: 185.47.252.212, port: 55429, type: vmess, uuid: 60db8cb1-a52b-492c-e23b-e754de6132b6, alterId: 0, cipher: auto, tls: false}
+  - {name: _12 |18.34Mb, server: 34.80.156.254, port: 55084, type: vmess, uuid: 5691fb8a-d890-4a33-9b0e-73017adae5b2, alterId: 0, cipher: auto, tls: false}
+  - {name: _13 | 3.65Mb, server: 172.233.171.224, port: 16416, type: vmess, uuid: 8c1b9bea-cb51-43bb-a65c-0af31bbbf145, alterId: 0, cipher: auto, tls: false}
+  - {name: _14 | 3.83Mb, server: 125.139.134.133, port: 21791, type: vmess, uuid: bc29535d-dcbe-4663-cfc3-16cb14ba13da, alterId: 0, cipher: auto, tls: false}
   - {name: CN_35, server: 111.170.36.146, port: 32309, type: vmess, uuid: e15ac3ce-6a1a-412a-aa07-4bc52daa5935, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/market?ed=512"}}
   - {name: CN_36, server: 120.210.205.59, port: 50002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false}
   - {name: CN_38, server: 47.92.152.169, port: 50002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false}
@@ -74,13 +74,13 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
@@ -144,13 +144,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
@@ -214,13 +214,13 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
@@ -283,13 +283,13 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
@@ -352,13 +352,13 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
@@ -421,13 +421,13 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
@@ -491,13 +491,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
@@ -577,13 +577,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Relay_-🇮🇩ID_08
-      - _09
-      - _10
-      - _11
-      - _12
-      - _13
-      - _14
+      - Relay_-🇮🇩ID_08 | 5.78Mb
+      - _09 | 2.77Mb
+      - _10 | 6.51Mb
+      - _11 | 6.02Mb
+      - _12 |18.34Mb
+      - _13 | 3.65Mb
+      - _14 | 3.83Mb
       - CN_35
       - CN_36
       - CN_38
